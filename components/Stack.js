@@ -18,7 +18,7 @@ function StackView() {
         <Stack.Screen
             name="SingleBook"
             component={SingleBook}
-            options={({route }) => ({ title: route.params.name })}/>
+            options={({route }) => ({ title: route.params.name, headerShown:false })}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

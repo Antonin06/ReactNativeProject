@@ -34,4 +34,22 @@ export default StyleSheet.create({
     color: theme.BLACK_COLOR,
     marginTop: 5,
   },
+  singleHeaderTitle: {
+    color: theme.WHITE_COLOR,
+  },
+  singleHeaderBack: {
+    width: 25,
+    height: 25,
+    tintColor: theme.WHITE_COLOR,
+  },
+  singleDescriptionTitle: {
+    color: theme.WHITE_COLOR,
+    fontSize: 16,
+    marginBottom: 10,
+  },
+  singleDescriptionContent: {
+    color: theme.WHITE_COLOR,
+    fontSize: 12,
+    lineHeight: 16,
+  },
 });
