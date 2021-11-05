@@ -41,7 +41,7 @@ function BooksList(dataHome) {
       <SafeAreaView>
         <View style={styles.homeHeading}>
           <Text style={styles.homeTitle}>Nos derniers Livres</Text>
-          <Text style={styles.homeTitle}>{dataHome.books.length}</Text>
+          <Text style={styles.homeTitleNumber}>{dataHome.books.length}</Text>
         </View>
         <FlatList
           horizontal

@@ -8,18 +8,24 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   home: {
-    backgroundColor: theme.PRIMARY_COLOR,
+    backgroundColor: theme.BLACK_COLOR,
     flex: 2,
   },
   homeHeading: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 20,
   },
   homeTitle: {
     fontSize: 18,
     paddingHorizontal: 10,
-    marginTop: 20,
-    marginBottom: 5,
+    color: theme.WHITE_COLOR,
+  },
+  homeTitleNumber: {
+    fontSize: 12,
+    marginRight: 10,
+    color: theme.WHITE_COLOR,
   },
   homeItem: {
     margin: 10,
@@ -31,8 +37,9 @@ export default StyleSheet.create({
     borderRadius: 20,
   },
   homeItemText: {
-    color: theme.BLACK_COLOR,
+    color: theme.WHITE_COLOR,
     marginTop: 5,
+    fontSize: 12,
   },
   singleHeaderTitle: {
     color: theme.WHITE_COLOR,
@@ -51,5 +58,20 @@ export default StyleSheet.create({
     color: theme.WHITE_COLOR,
     fontSize: 12,
     lineHeight: 16,
+  },
+  homeHeaderTop: {
+    backgroundColor: '#1a1a1a',
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
+  homeHeaderTopTitle: {
+    color: theme.WHITE_COLOR,
+    fontSize: 16,
+  },
+  homeHeaderTopGreetings: {
+    color: theme.WHITE_COLOR,
+    fontSize: 10,
+    marginBottom: 10,
   },
 });

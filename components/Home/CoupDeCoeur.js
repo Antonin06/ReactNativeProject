@@ -40,19 +40,19 @@ const ListItem = ({item}) => {
 };
 
 function CoupDeCoeur(dataHome) {
-  console.log(dataHome.books, 'Coupdecoeur');
-  console.log(
-    dataHome.books.filter((x, i) => {
-      return x.CoupDeCoeur;
-    }).length,
-    'toto',
-  );
+  // console.log(dataHome.books, 'Coupdecoeur');
+  // console.log(
+  //   dataHome.books.filter((x, i) => {
+  //     return x.CoupDeCoeur;
+  //   }).length,
+  //   'toto',
+  // );
   return (
     <View style={styles.home}>
       <SafeAreaView>
         <View style={styles.homeHeading}>
           <Text style={styles.homeTitle}>Nos Coups de Coeur</Text>
-          <Text style={styles.homeTitle}>
+          <Text style={styles.homeTitleNumber}>
             {
               dataHome.books.filter((book, i) => {
                 return book.CoupDeCoeur;
