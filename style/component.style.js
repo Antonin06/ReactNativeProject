@@ -15,16 +15,19 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 25,
+    marginBottom: 5,
   },
   homeTitle: {
     fontSize: 18,
     paddingHorizontal: 10,
     color: theme.WHITE_COLOR,
   },
+  homeTitleWrapper: {
+    flexDirection: 'row',
+  },
   homeTitleNumber: {
-    fontSize: 12,
-    marginRight: 10,
+    fontSize: 10,
     color: theme.WHITE_COLOR,
   },
   homeItem: {
@@ -35,6 +38,13 @@ export default StyleSheet.create({
     height: 150,
     resizeMode: 'contain',
     borderRadius: 20,
+  },
+  homeCategoryIcon: {
+    width: 20,
+    height: 20,
+    tintColor: theme.WHITE_COLOR,
+    transform: [{rotate: '180deg'}],
+    marginRight: 10,
   },
   homeItemText: {
     color: theme.WHITE_COLOR,
@@ -73,5 +83,20 @@ export default StyleSheet.create({
     color: theme.WHITE_COLOR,
     fontSize: 10,
     marginBottom: 10,
+  },
+  singleCategoryView: {
+    backgroundColor: theme.BLACK_COLOR,
+    flex: 1,
+    justifyContent: 'center',
+  },
+  singleCategoryColumnWrapper: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  singleCategoryThumbnail: {
+    width: 'auto',
+    height: 150,
+    resizeMode: 'contain',
+    borderRadius: 20,
   },
 });

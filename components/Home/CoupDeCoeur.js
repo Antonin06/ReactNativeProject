@@ -4,12 +4,13 @@ import {
   Image,
   SafeAreaView,
   Text,
-  TouchableOpacity,
+  TouchableOpacity, TouchableWithoutFeedback,
   View,
 } from 'react-native';
 import styles from '../../style/component.style';
 import {useNavigation} from '@react-navigation/native';
 import {API_URL} from '../../config/environement/dev';
+import icons from '../../style/icons.style';
 
 const ListItem = ({item}) => {
   // console.log(item);
@@ -47,18 +48,33 @@ function CoupDeCoeur(dataHome) {
   //   }).length,
   //   'toto',
   // );
+  const navigation = useNavigation();
   return (
     <View style={styles.home}>
       <SafeAreaView>
         <View style={styles.homeHeading}>
-          <Text style={styles.homeTitle}>Nos Coups de Coeur</Text>
-          <Text style={styles.homeTitleNumber}>
-            {
-              dataHome.books.filter((book, i) => {
-                return book.CoupDeCoeur;
-              }).length
-            }
-          </Text>
+          <View style={styles.homeTitleWrapper}>
+            <Text style={styles.homeTitle}>
+              Nos Coups de Coeur
+            </Text>
+            <Text style={styles.homeTitleNumber}>
+              {
+                dataHome.books.filter((book, i) => {
+                  return book.CoupDeCoeur;
+                }).length
+              }
+            </Text>
+          </View>
+          <TouchableWithoutFeedback
+              onPress={() =>
+                  navigation.navigate('Coup_de_coeur')
+              }>
+            <Image
+                source={icons.back_arrow_icon}
+                resizeMode="contain"
+                style={styles.homeCategoryIcon}
+            />
+          </TouchableWithoutFeedback>
         </View>
         <FlatList
           horizontal
